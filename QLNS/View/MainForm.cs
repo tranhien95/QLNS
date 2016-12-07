@@ -48,5 +48,18 @@ namespace QLNS.View
                 addtab.AddTabControl(xtraTabControl1, itemTabName, userControl);
             }
         }
+
+        private void xtraTabControl1_CloseButtonClick(object sender, EventArgs e)
+        {
+            xtraTabControl1.TabPages.RemoveAt(xtraTabControl1.SelectedTabPageIndex);
+            xtraTabControl1.SelectedTabPageIndex = xtraTabControl1.TabPages.Count - 1;
+        }
+
+        private void xtraTabControl1_ControlAdded(object sender, ControlEventArgs e)
+        {
+            xtraTabControl1.SelectedTabPageIndex = xtraTabControl1.TabPages.Count - 1;
+        }
+
+
     }
 }
