@@ -12,6 +12,7 @@ namespace QLNS.DAO
 {
     class DVTDAO:BaseDAO
     {
+        //Lấy hết bảng DVT
         public DVTInfo[] SelectAll()
         {
 
@@ -40,6 +41,7 @@ namespace QLNS.DAO
             }
         }
 
+        //Thêm dữ liệu vào bảng DVT
         public bool Insert(DVTInfo dvt)
         {
             try
@@ -64,11 +66,13 @@ namespace QLNS.DAO
             }
         }
 
+        //Delete
         public bool Delete(int madon)
         {
             return true;
         }
 
+        //Update bảng DVT
         public bool Update(DVTInfo dvt)
         {
             try
@@ -92,6 +96,7 @@ namespace QLNS.DAO
             }
         }
 
+        //Lấy ra mã DVT lớn nhất
         public int SelectMaxDVT()
         {
             try
@@ -106,6 +111,56 @@ namespace QLNS.DAO
             {
                 MessageBox.Show(e.Message, "Error!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return -1;
+            }
+        }
+
+        //Tìm thông tin DVT theo tên
+        public DVTInfo[] TimTenDVT(string ten)
+        {
+            DataTable dt;
+            int i = 0;
+            try
+            {
+                SqlCommand cmd = new SqlCommand();
+                cmd.CommandText = @"Select * from DVT where TenDVT like N'%" + ten + "%'";
+                dt = GetTable(cmd, "DVT");
+                DVTInfo[] dvt = new DVTInfo[dt.Rows.Count];
+                foreach (DataRow row in dt.Rows)
+                {
+                    dvt[i] = new DVTInfo();
+                    dvt[i].MaDVT = int.Parse(row["MaDVT"].ToString());
+                    dvt[i].TenDVT = row["TenDVT"].ToString();
+                    dvt[i].MaVPPLe = row["MaVPPLe"].ToString();
+                    dvt[i].SoLuongDoi = Int32.Parse(row["SoLuongDoi"].ToString());
+                    i++;
+                }
+                return dvt;
+            }
+            catch (SqlException e)
+            {
+                return null;
+            }
+        }
+
+        //Lấy 1 DVT dựa trên mã của nó
+        public DVTInfo GetOne(int madvt)
+        {
+            DataTable dt;
+            try
+            {
+                SqlCommand cmd = new SqlCommand();
+                cmd.CommandText = @"Select * from DVT where MaDVT = " + madvt.ToString();
+                dt = GetTable(cmd, "DVT");
+                DVTInfo dvt = new DVTInfo();
+                dvt.MaDVT = int.Parse(dt.Rows[0]["MaDVT"].ToString());
+                dvt.TenDVT = dt.Rows[0]["TenDVT"].ToString();
+                dvt.MaVPPLe = dt.Rows[0]["MaVPPLe"].ToString();
+                dvt.SoLuongDoi = Int32.Parse(dt.Rows[0]["SoLuongDoi"].ToString());
+                return dvt;
+            }
+            catch (SqlException e)
+            {
+                return null;
             }
         }
 

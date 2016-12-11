@@ -52,5 +52,53 @@ namespace QLNS.View
             tbl.Columns.Add("Số Lượng Đổi", typeof(int));
             return tbl;
         }
+
+        private void btnChiTiet_Click(object sender, EventArgs e)
+        {
+            if (gvDVT.RowCount>0)
+            {
+                int madvt = gvDVT.GetSelectedRows()[0];
+                dvtInfo = dvtDAO.GetOne(madvt);
+                txtMaDVT1.Text = dvtInfo.MaDVT.ToString();
+                txtTenDVT.Text = dvtInfo.TenDVT;
+                txtSoLuongDoi.Text = dvtInfo.SoLuongDoi.ToString();
+            }
+        }
+
+        private void btnTim_Click(object sender, EventArgs e)
+        {
+            dvtArr = dvtDAO.TimTenDVT(txtTenDVTF.Text);
+            gcDVT.DataSource = CreateTable(dvtArr.Length);
+            for (int i = 0; i < dvtArr.Length; i++)
+            {
+                gvDVT.AddNewRow();
+                int newRowHandle = gvDVT.FocusedRowHandle;
+
+                gvDVT.SetRowCellValue(newRowHandle, gvDVT.Columns[0], dvtArr[i].MaDVT);
+                gvDVT.SetRowCellValue(newRowHandle, gvDVT.Columns[1], dvtArr[i].TenDVT);
+                gvDVT.SetRowCellValue(newRowHandle, gvDVT.Columns[2], dvtArr[i].MaVPPLe);
+                gvDVT.SetRowCellValue(newRowHandle, gvDVT.Columns[3], dvtArr[i].SoLuongDoi);
+                gvDVT.UpdateCurrentRow();
+                gvDVT.RefreshData();
+            }
+        }
+
+        private void btnLamMoi_Click(object sender, EventArgs e)
+        {
+            dvtArr = dvtDAO.SelectAll();
+            gcDVT.DataSource = CreateTable(dvtArr.Length);
+            for (int i = 0; i < dvtArr.Length; i++)
+            {
+                gvDVT.AddNewRow();
+                int newRowHandle = gvDVT.FocusedRowHandle;
+
+                gvDVT.SetRowCellValue(newRowHandle, gvDVT.Columns[0], dvtArr[i].MaDVT);
+                gvDVT.SetRowCellValue(newRowHandle, gvDVT.Columns[1], dvtArr[i].TenDVT);
+                gvDVT.SetRowCellValue(newRowHandle, gvDVT.Columns[2], dvtArr[i].MaVPPLe);
+                gvDVT.SetRowCellValue(newRowHandle, gvDVT.Columns[3], dvtArr[i].SoLuongDoi);
+                gvDVT.UpdateCurrentRow();
+                gvDVT.RefreshData();
+            }
+        }
     }
 }
