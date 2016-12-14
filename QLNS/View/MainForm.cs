@@ -34,32 +34,111 @@ namespace QLNS.View
         public void AddTabControl(UserControl userControl, string itemTabName)
         {
             bool isExists = false;
-            foreach (XtraTabPage tabItem in xtraTabControl1.TabPages)
+            foreach (XtraTabPage tabItem in xtcHDBH.TabPages)
             {
                 if (tabItem.Text == itemTabName)
                 {
                     isExists = true;
-                    xtraTabControl1.SelectedTabPage = tabItem;
+                    xtcHDBH.SelectedTabPage = tabItem;
                 }
             }
             if (!isExists)
             {
                 AddTab addtab = new AddTab();
-                addtab.AddTabControl(xtraTabControl1, itemTabName, userControl);
+                addtab.AddTabControl(xtcHDBH, itemTabName, userControl);
             }
         }
 
         private void xtraTabControl1_CloseButtonClick(object sender, EventArgs e)
         {
-            xtraTabControl1.TabPages.RemoveAt(xtraTabControl1.SelectedTabPageIndex);
-            xtraTabControl1.SelectedTabPageIndex = xtraTabControl1.TabPages.Count - 1;
+            xtcHDBH.TabPages.RemoveAt(xtcHDBH.SelectedTabPageIndex);
+            xtcHDBH.SelectedTabPageIndex = xtcHDBH.TabPages.Count - 1;
         }
 
         private void xtraTabControl1_ControlAdded(object sender, ControlEventArgs e)
         {
-            xtraTabControl1.SelectedTabPageIndex = xtraTabControl1.TabPages.Count - 1;
+            xtcHDBH.SelectedTabPageIndex = xtcHDBH.TabPages.Count - 1;
         }
 
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+            ChangeTypeMenu(0);
+        }
 
+        private void btnDangNhap_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            //DangNhap dangnhap = new DangNhap();
+            //AddTabControl(dangnhap, "Đăng Nhập");
+            DangNhapFrm frm = new DangNhapFrm();
+            frm.ShowDialog();
+            if(frm.DialogResult== DialogResult.Cancel)
+            {
+                ChangeTypeMenu(frm.LoaiTK);
+                if(frm.LoaiTK>0)
+                {
+                    ribTaiKhoan.Text = frm.taikhoan;
+                }
+            }
+        }
+
+        public void ChangeTypeMenu(int key)
+        {
+            switch(key)
+            {
+                case 0:
+                    ribTaiKhoan.Text = "User";
+                    ribHoaDon.Visible = false;
+                    ribSanPham.Visible = false;
+                    ribNCC.Visible = false;
+                    ribDVT.Visible = false;
+                    ribChiPhi.Visible = false;
+                    ribHDNhap.Visible = false;
+                    ribPhieuNhap.Visible = false;
+                    ribLoaiSach.Visible = false;
+                    btnDangXuat.Enabled = false;
+                    btnDoiMK.Enabled = false;
+                    btnDSTK.Enabled = false;
+                    btnThemTK.Enabled = false;
+                    btnDangNhap.Enabled = true;
+                    break;
+                case 1:
+                    ribHoaDon.Visible = true;
+                    ribSanPham.Visible = true;
+                    ribNCC.Visible = true;
+                    ribDVT.Visible = true;
+                    ribChiPhi.Visible = true;
+                    ribHDNhap.Visible = true;
+                    ribPhieuNhap.Visible = true;
+                    ribLoaiSach.Visible = true;
+                    btnDangXuat.Enabled = true;
+                    btnDoiMK.Enabled = true;
+                    btnDSTK.Enabled = true;
+                    btnThemTK.Enabled = true;
+                    btnDangNhap.Enabled = false;
+                    break;
+                case 2:
+                    ribHoaDon.Visible = true;
+                    ribSanPham.Visible = true;
+                    ribNCC.Visible = false;
+                    ribDVT.Visible = false;
+                    ribChiPhi.Visible = true;
+                    ribHDNhap.Visible = false;
+                    ribPhieuNhap.Visible = false;
+                    ribLoaiSach.Visible = false;
+                    btnDangXuat.Enabled = true;
+                    btnDangNhap.Enabled = false;
+                    btnDoiMK.Enabled = true;
+                    btnDSTK.Enabled = false;
+                    btnThemTK.Enabled = false;
+                    break;
+                default:
+                    break;
+            }
+        }
+
+        private void btnDangXuat_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            ChangeTypeMenu(0);
+        }
     }
 }

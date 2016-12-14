@@ -85,6 +85,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\LogIn.cs" />
     <Compile Include="Utilities\XMLEditor.cs" />
+    <Compile Include="View\DangNhap.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\DangNhap.Designer.cs">
+      <DependentUpon>DangNhap.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\DVTThem.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -116,6 +122,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="View\DangNhap.resx">
+      <DependentUpon>DangNhap.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\DVTThem.resx">
       <DependentUpon>DVTThem.cs</DependentUpon>
     </EmbeddedResource>

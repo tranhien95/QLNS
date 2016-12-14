@@ -31,10 +31,11 @@ E:\GITHUB\QLNS\QLNS\obj\Debug\QLNS.pdb
 D:\GITHUB\QLNS\QLNS\bin\Debug\QLNS.exe
 D:\GITHUB\QLNS\QLNS\bin\Debug\QLNS.pdb
 D:\GITHUB\QLNS\QLNS\obj\Debug\QLNS.csprojResolveAssemblyReference.cache
-D:\GITHUB\QLNS\QLNS\obj\Debug\QLNS.DangNhap.resources
 D:\GITHUB\QLNS\QLNS\obj\Debug\QLNS.Properties.Resources.resources
 D:\GITHUB\QLNS\QLNS\obj\Debug\QLNS.View.DVTThem.resources
 D:\GITHUB\QLNS\QLNS\obj\Debug\QLNS.View.ListDVT.resources
 D:\GITHUB\QLNS\QLNS\obj\Debug\QLNS.View.MainForm.resources
 D:\GITHUB\QLNS\QLNS\obj\Debug\QLNS.csproj.GenerateResource.Cache
 D:\GITHUB\QLNS\QLNS\obj\Debug\QLNS.exe.licenses
+D:\GITHUB\QLNS\QLNS\obj\Debug\QLNS.View.DangNhap.resources
+D:\GITHUB\QLNS\QLNS\obj\Debug\QLNS.DangNhapFrm.resources

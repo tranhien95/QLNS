@@ -32,26 +32,27 @@ namespace QLNS.Services
             return false;
         }
 
-        public bool CheckPass(TaiKhoanInfo AccInfo)
+        public int CheckPass(TaiKhoanInfo AccInfo)
         {
             DataTable dt = AccDAO.GetSingle(AccInfo.ID);
             MD5 md5Hash = MD5.Create();
             //string PassMd5 = GetMd5Hash(md5Hash, AccInfo.Pass);
-            if(dt != null && dt.Rows[0] != null)
+            if(dt != null&&dt.Rows.Count>0)
             {
                 string SourcePass = dt.Rows[0].Field<string>("Pass");
+                int LoaiTK = dt.Rows[0].Field<int>("LoaiTK");
                 StringComparer comparer = StringComparer.OrdinalIgnoreCase;
 
                 if (0 == comparer.Compare(AccInfo.Pass, SourcePass))
                 {
-                    return true;
+                    return LoaiTK;
                 }
                 else
                 {
-                    return false;
+                    return 0;
                 }
             }
-            return false;
+            return 0;
         }
 
         private string GetMd5Hash(MD5 md5Hash, string input)

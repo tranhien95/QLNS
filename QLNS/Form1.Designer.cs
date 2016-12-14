@@ -1,6 +1,6 @@
 ﻿namespace QLNS
 {
-    partial class DangNhap
+    partial class DangNhapFrm
     {
         /// <summary>
         /// Required designer variable.
@@ -87,7 +87,7 @@
             this.btnHuy.TabIndex = 1;
             this.btnHuy.Text = "Hủy";
             // 
-            // DangNhap
+            // DangNhapFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -100,7 +100,7 @@
             this.Controls.Add(this.txtTaiKhoan);
             this.Controls.Add(this.txtMatKhau);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Name = "DangNhap";
+            this.Name = "DangNhapFrm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ĐĂNG NHẬP";
             ((System.ComponentModel.ISupportInitialize)(this.txtMatKhau.Properties)).EndInit();
