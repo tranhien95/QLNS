@@ -29,6 +29,7 @@ namespace QLNS.DAO
             ConnectionString = @"Server=" + Server + "; Database=" + DatabaseName + "; Trusted_Connection=Yes;";
             conn.ConnectionString = ConnectionString;
         }
+
         public void SetConnectionStringSQLAuth()
         {
             String Server = config.GetServerName();
