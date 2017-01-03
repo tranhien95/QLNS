@@ -66,7 +66,7 @@
             // 
             this.btnTim.Image = ((System.Drawing.Image)(resources.GetObject("btnTim.Image")));
             this.btnTim.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.btnTim.Location = new System.Drawing.Point(417, 111);
+            this.btnTim.Location = new System.Drawing.Point(387, 59);
             this.btnTim.Name = "btnTim";
             this.btnTim.Size = new System.Drawing.Size(38, 20);
             this.btnTim.TabIndex = 0;
@@ -76,7 +76,7 @@
             // 
             this.btnChiTiet.Image = ((System.Drawing.Image)(resources.GetObject("btnChiTiet.Image")));
             this.btnChiTiet.ImageLocation = DevExpress.XtraEditors.ImageLocation.TopCenter;
-            this.btnChiTiet.Location = new System.Drawing.Point(587, 88);
+            this.btnChiTiet.Location = new System.Drawing.Point(676, 35);
             this.btnChiTiet.Name = "btnChiTiet";
             this.btnChiTiet.Size = new System.Drawing.Size(70, 60);
             this.btnChiTiet.TabIndex = 0;
@@ -85,10 +85,10 @@
             // 
             // gcDVT
             // 
-            this.gcDVT.Location = new System.Drawing.Point(206, 158);
+            this.gcDVT.Location = new System.Drawing.Point(74, 155);
             this.gcDVT.MainView = this.gvDVT;
             this.gcDVT.Name = "gcDVT";
-            this.gcDVT.Size = new System.Drawing.Size(477, 197);
+            this.gcDVT.Size = new System.Drawing.Size(751, 303);
             this.gcDVT.TabIndex = 1;
             this.gcDVT.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvDVT});
@@ -100,7 +100,7 @@
             // 
             // labelControl1
             // 
-            this.labelControl1.Location = new System.Drawing.Point(249, 114);
+            this.labelControl1.Location = new System.Drawing.Point(173, 62);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(45, 13);
             this.labelControl1.TabIndex = 2;
@@ -108,7 +108,7 @@
             // 
             // txtTenDVTF
             // 
-            this.txtTenDVTF.Location = new System.Drawing.Point(311, 111);
+            this.txtTenDVTF.Location = new System.Drawing.Point(256, 59);
             this.txtTenDVTF.Name = "txtTenDVTF";
             this.txtTenDVTF.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.False;
             this.txtTenDVTF.Size = new System.Drawing.Size(100, 20);
@@ -130,9 +130,9 @@
             this.panelControl1.Controls.Add(this.labelControl3);
             this.panelControl1.Controls.Add(this.txtMaDVT1);
             this.panelControl1.Controls.Add(this.labelControl2);
-            this.panelControl1.Location = new System.Drawing.Point(689, 76);
+            this.panelControl1.Location = new System.Drawing.Point(898, 3);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(413, 307);
+            this.panelControl1.Size = new System.Drawing.Size(399, 469);
             this.panelControl1.TabIndex = 4;
             // 
             // cbbMaSPLe
@@ -234,7 +234,7 @@
             // 
             this.btnLamMoi.Image = ((System.Drawing.Image)(resources.GetObject("btnLamMoi.Image")));
             this.btnLamMoi.ImageLocation = DevExpress.XtraEditors.ImageLocation.TopCenter;
-            this.btnLamMoi.Location = new System.Drawing.Point(494, 88);
+            this.btnLamMoi.Location = new System.Drawing.Point(560, 35);
             this.btnLamMoi.Name = "btnLamMoi";
             this.btnLamMoi.Size = new System.Drawing.Size(70, 60);
             this.btnLamMoi.TabIndex = 0;
@@ -253,7 +253,7 @@
             this.Controls.Add(this.btnChiTiet);
             this.Controls.Add(this.btnTim);
             this.Name = "ListDVT";
-            this.Size = new System.Drawing.Size(1366, 500);
+            this.Size = new System.Drawing.Size(1300, 475);
             this.Load += new System.EventHandler(this.ListDVT_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gcDVT)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvDVT)).EndInit();

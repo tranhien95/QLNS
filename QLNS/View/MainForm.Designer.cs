@@ -109,7 +109,7 @@
             this.ribDVT,
             this.ribTaiKhoan});
             this.ribbon.ShowToolbarCustomizeItem = false;
-            this.ribbon.Size = new System.Drawing.Size(924, 162);
+            this.ribbon.Size = new System.Drawing.Size(1290, 162);
             this.ribbon.StatusBar = this.ribbonStatusBar;
             this.ribbon.Toolbar.ShowCustomizeItem = false;
             // 
@@ -382,10 +382,10 @@
             // 
             // ribbonStatusBar
             // 
-            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 489);
+            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 668);
             this.ribbonStatusBar.Name = "ribbonStatusBar";
             this.ribbonStatusBar.Ribbon = this.ribbon;
-            this.ribbonStatusBar.Size = new System.Drawing.Size(924, 31);
+            this.ribbonStatusBar.Size = new System.Drawing.Size(1290, 31);
             // 
             // xtcHDBH
             // 
@@ -399,7 +399,7 @@
             this.xtcHDBH.Location = new System.Drawing.Point(0, 162);
             this.xtcHDBH.LookAndFeel.SkinName = "DevExpress Dark Style";
             this.xtcHDBH.Name = "xtcHDBH";
-            this.xtcHDBH.Size = new System.Drawing.Size(924, 327);
+            this.xtcHDBH.Size = new System.Drawing.Size(1290, 506);
             this.xtcHDBH.TabIndex = 2;
             this.xtcHDBH.CloseButtonClick += new System.EventHandler(this.xtraTabControl1_CloseButtonClick);
             this.xtcHDBH.ControlAdded += new System.Windows.Forms.ControlEventHandler(this.xtraTabControl1_ControlAdded);
@@ -408,7 +408,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(924, 520);
+            this.ClientSize = new System.Drawing.Size(1290, 699);
             this.Controls.Add(this.xtcHDBH);
             this.Controls.Add(this.ribbonStatusBar);
             this.Controls.Add(this.ribbon);
@@ -419,7 +419,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.StatusBar = this.ribbonStatusBar;
             this.Text = "MainForm";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.MainForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtcHDBH)).EndInit();
