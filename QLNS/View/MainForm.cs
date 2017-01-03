@@ -92,9 +92,9 @@ namespace QLNS.View
                     ribNCC.Visible = false;
                     ribDVT.Visible = false;
                     ribChiPhi.Visible = false;
-                    ribHDNhap.Visible = false;
                     ribPhieuNhap.Visible = false;
                     ribLoaiSach.Visible = false;
+                    ribBaoCao.Visible = false;
                     btnDangXuat.Enabled = false;
                     btnDoiMK.Enabled = false;
                     btnDSTK.Enabled = false;
@@ -107,9 +107,9 @@ namespace QLNS.View
                     ribNCC.Visible = true;
                     ribDVT.Visible = true;
                     ribChiPhi.Visible = true;
-                    ribHDNhap.Visible = true;
                     ribPhieuNhap.Visible = true;
                     ribLoaiSach.Visible = true;
+                    ribBaoCao.Visible = true;
                     btnDangXuat.Enabled = true;
                     btnDoiMK.Enabled = true;
                     btnDSTK.Enabled = true;
@@ -122,9 +122,9 @@ namespace QLNS.View
                     ribNCC.Visible = false;
                     ribDVT.Visible = false;
                     ribChiPhi.Visible = true;
-                    ribHDNhap.Visible = false;
                     ribPhieuNhap.Visible = false;
                     ribLoaiSach.Visible = false;
+                    ribBaoCao.Visible = false;
                     btnDangXuat.Enabled = true;
                     btnDangNhap.Enabled = false;
                     btnDoiMK.Enabled = true;
