@@ -15,7 +15,6 @@ namespace QLNS.DAO
         //Lấy hết bảng DVT
         public DVTInfo[] SelectAll()
         {
-
             DataTable dt;
             int i = 0;
             try

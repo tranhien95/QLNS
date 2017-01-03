@@ -56,3 +56,4 @@ D:\GITHUB\QLNS\QLNS\obj\Debug\QLNS.csproj.GenerateResource.Cache
 D:\GITHUB\QLNS\QLNS\obj\Debug\QLNS.exe.licenses
 D:\GITHUB\QLNS\QLNS\obj\Debug\QLNS.exe
 D:\GITHUB\QLNS\QLNS\obj\Debug\QLNS.pdb
+D:\GITHUB\QLNS\QLNS\obj\Debug\QLNS.View.DoiMK.resources

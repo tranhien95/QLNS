@@ -100,5 +100,10 @@ namespace QLNS.View
                 gvDVT.RefreshData();
             }
         }
+
+        private void panelControl2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

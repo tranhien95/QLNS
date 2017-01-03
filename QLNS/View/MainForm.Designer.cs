@@ -46,27 +46,27 @@
             this.btnDSTK = new DevExpress.XtraBars.BarButtonItem();
             this.btnThemTK = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem10 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem4 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem5 = new DevExpress.XtraBars.BarButtonItem();
             this.ribHoaDon = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroup7 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribSanPham = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup4 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribChiPhi = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.ribPhieuNhap = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.ribBaoCao = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.ribLoaiSach = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribNCC = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribDVT = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.ribChiPhi = new DevExpress.XtraBars.Ribbon.RibbonPage();
-            this.ribPhieuNhap = new DevExpress.XtraBars.Ribbon.RibbonPage();
-            this.ribLoaiSach = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribTaiKhoan = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup5 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup6 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.xtcHDBH = new DevExpress.XtraTab.XtraTabControl();
             this.defaultLookAndFeel1 = new DevExpress.LookAndFeel.DefaultLookAndFeel(this.components);
-            this.ribbonPageGroup7 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.barButtonItem4 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem5 = new DevExpress.XtraBars.BarButtonItem();
-            this.ribBaoCao = new DevExpress.XtraBars.Ribbon.RibbonPage();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtcHDBH)).BeginInit();
             this.SuspendLayout();
@@ -202,6 +202,7 @@
             this.btnDoiMK.Id = 12;
             this.btnDoiMK.Name = "btnDoiMK";
             this.btnDoiMK.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.btnDoiMK.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnDoiMK_ItemClick);
             // 
             // barButtonItem7
             // 
@@ -233,8 +234,27 @@
             this.barButtonItem10.Name = "barButtonItem10";
             this.barButtonItem10.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             // 
+            // barButtonItem4
+            // 
+            this.barButtonItem4.Caption = "Thêm Mới";
+            this.barButtonItem4.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem4.Glyph")));
+            this.barButtonItem4.Id = 17;
+            this.barButtonItem4.Name = "barButtonItem4";
+            this.barButtonItem4.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.barButtonItem4.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem4_ItemClick);
+            // 
+            // barButtonItem5
+            // 
+            this.barButtonItem5.Caption = "Danh Sách HĐ Nhập";
+            this.barButtonItem5.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem5.Glyph")));
+            this.barButtonItem5.Id = 18;
+            this.barButtonItem5.Name = "barButtonItem5";
+            this.barButtonItem5.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            // 
             // ribHoaDon
             // 
+            this.ribHoaDon.Appearance.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
+            this.ribHoaDon.Appearance.Options.UseFont = true;
             this.ribHoaDon.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
             this.ribbonPageGroup1,
             this.ribbonPageGroup7});
@@ -249,8 +269,17 @@
             this.ribbonPageGroup1.Name = "ribbonPageGroup1";
             this.ribbonPageGroup1.Text = "Hóa Đơn Bán Hàng";
             // 
+            // ribbonPageGroup7
+            // 
+            this.ribbonPageGroup7.ItemLinks.Add(this.barButtonItem4);
+            this.ribbonPageGroup7.ItemLinks.Add(this.barButtonItem5);
+            this.ribbonPageGroup7.Name = "ribbonPageGroup7";
+            this.ribbonPageGroup7.Text = "Hóa Đơn Nhập Hàng";
+            // 
             // ribSanPham
             // 
+            this.ribSanPham.Appearance.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
+            this.ribSanPham.Appearance.Options.UseFont = true;
             this.ribSanPham.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
             this.ribbonPageGroup2,
             this.ribbonPageGroup4});
@@ -272,14 +301,50 @@
             this.ribbonPageGroup4.Name = "ribbonPageGroup4";
             this.ribbonPageGroup4.Text = "Sản Phẩm";
             // 
+            // ribChiPhi
+            // 
+            this.ribChiPhi.Appearance.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
+            this.ribChiPhi.Appearance.Options.UseFont = true;
+            this.ribChiPhi.Image = ((System.Drawing.Image)(resources.GetObject("ribChiPhi.Image")));
+            this.ribChiPhi.Name = "ribChiPhi";
+            this.ribChiPhi.Text = "Chi Phí";
+            // 
+            // ribPhieuNhap
+            // 
+            this.ribPhieuNhap.Appearance.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
+            this.ribPhieuNhap.Appearance.Options.UseFont = true;
+            this.ribPhieuNhap.Image = ((System.Drawing.Image)(resources.GetObject("ribPhieuNhap.Image")));
+            this.ribPhieuNhap.Name = "ribPhieuNhap";
+            this.ribPhieuNhap.Text = "Phiếu Nhập";
+            // 
+            // ribBaoCao
+            // 
+            this.ribBaoCao.Appearance.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
+            this.ribBaoCao.Appearance.Options.UseFont = true;
+            this.ribBaoCao.Image = ((System.Drawing.Image)(resources.GetObject("ribBaoCao.Image")));
+            this.ribBaoCao.Name = "ribBaoCao";
+            this.ribBaoCao.Text = "Báo Cáo";
+            // 
+            // ribLoaiSach
+            // 
+            this.ribLoaiSach.Appearance.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
+            this.ribLoaiSach.Appearance.Options.UseFont = true;
+            this.ribLoaiSach.Image = ((System.Drawing.Image)(resources.GetObject("ribLoaiSach.Image")));
+            this.ribLoaiSach.Name = "ribLoaiSach";
+            this.ribLoaiSach.Text = "Loại Sách";
+            // 
             // ribNCC
             // 
+            this.ribNCC.Appearance.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
+            this.ribNCC.Appearance.Options.UseFont = true;
             this.ribNCC.Image = ((System.Drawing.Image)(resources.GetObject("ribNCC.Image")));
             this.ribNCC.Name = "ribNCC";
             this.ribNCC.Text = "NCC";
             // 
             // ribDVT
             // 
+            this.ribDVT.Appearance.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
+            this.ribDVT.Appearance.Options.UseFont = true;
             this.ribDVT.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
             this.ribbonPageGroup3});
             this.ribDVT.Image = ((System.Drawing.Image)(resources.GetObject("ribDVT.Image")));
@@ -291,26 +356,10 @@
             this.ribbonPageGroup3.ItemLinks.Add(this.btnDSDVT);
             this.ribbonPageGroup3.Name = "ribbonPageGroup3";
             // 
-            // ribChiPhi
-            // 
-            this.ribChiPhi.Image = ((System.Drawing.Image)(resources.GetObject("ribChiPhi.Image")));
-            this.ribChiPhi.Name = "ribChiPhi";
-            this.ribChiPhi.Text = "Chi Phí";
-            // 
-            // ribPhieuNhap
-            // 
-            this.ribPhieuNhap.Image = ((System.Drawing.Image)(resources.GetObject("ribPhieuNhap.Image")));
-            this.ribPhieuNhap.Name = "ribPhieuNhap";
-            this.ribPhieuNhap.Text = "Phiếu Nhập";
-            // 
-            // ribLoaiSach
-            // 
-            this.ribLoaiSach.Image = ((System.Drawing.Image)(resources.GetObject("ribLoaiSach.Image")));
-            this.ribLoaiSach.Name = "ribLoaiSach";
-            this.ribLoaiSach.Text = "Loại Sách";
-            // 
             // ribTaiKhoan
             // 
+            this.ribTaiKhoan.Appearance.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
+            this.ribTaiKhoan.Appearance.Options.UseFont = true;
             this.ribTaiKhoan.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
             this.ribbonPageGroup5,
             this.ribbonPageGroup6});
@@ -346,42 +395,14 @@
             this.xtcHDBH.Appearance.Options.UseBackColor = true;
             this.xtcHDBH.Appearance.Options.UseBorderColor = true;
             this.xtcHDBH.ClosePageButtonShowMode = DevExpress.XtraTab.ClosePageButtonShowMode.InActiveTabPageHeader;
-            this.xtcHDBH.Location = new System.Drawing.Point(0, 168);
+            this.xtcHDBH.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.xtcHDBH.Location = new System.Drawing.Point(0, 162);
             this.xtcHDBH.LookAndFeel.SkinName = "DevExpress Dark Style";
             this.xtcHDBH.Name = "xtcHDBH";
-            this.xtcHDBH.Size = new System.Drawing.Size(921, 320);
+            this.xtcHDBH.Size = new System.Drawing.Size(924, 327);
             this.xtcHDBH.TabIndex = 2;
             this.xtcHDBH.CloseButtonClick += new System.EventHandler(this.xtraTabControl1_CloseButtonClick);
             this.xtcHDBH.ControlAdded += new System.Windows.Forms.ControlEventHandler(this.xtraTabControl1_ControlAdded);
-            // 
-            // ribbonPageGroup7
-            // 
-            this.ribbonPageGroup7.ItemLinks.Add(this.barButtonItem4);
-            this.ribbonPageGroup7.ItemLinks.Add(this.barButtonItem5);
-            this.ribbonPageGroup7.Name = "ribbonPageGroup7";
-            this.ribbonPageGroup7.Text = "Hóa Đơn Nhập Hàng";
-            // 
-            // barButtonItem4
-            // 
-            this.barButtonItem4.Caption = "Thêm Mới";
-            this.barButtonItem4.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem4.Glyph")));
-            this.barButtonItem4.Id = 17;
-            this.barButtonItem4.Name = "barButtonItem4";
-            this.barButtonItem4.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
-            // 
-            // barButtonItem5
-            // 
-            this.barButtonItem5.Caption = "Danh Sách HĐ Nhập";
-            this.barButtonItem5.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem5.Glyph")));
-            this.barButtonItem5.Id = 18;
-            this.barButtonItem5.Name = "barButtonItem5";
-            this.barButtonItem5.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
-            // 
-            // ribBaoCao
-            // 
-            this.ribBaoCao.Image = ((System.Drawing.Image)(resources.GetObject("ribBaoCao.Image")));
-            this.ribBaoCao.Name = "ribBaoCao";
-            this.ribBaoCao.Text = "Báo Cáo";
             // 
             // MainForm
             // 
@@ -392,11 +413,13 @@
             this.Controls.Add(this.ribbonStatusBar);
             this.Controls.Add(this.ribbon);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "MainForm";
             this.Ribbon = this.ribbon;
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.StatusBar = this.ribbonStatusBar;
             this.Text = "MainForm";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.MainForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtcHDBH)).EndInit();

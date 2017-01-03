@@ -7,7 +7,7 @@ using System.Security.Cryptography;
 
 namespace QLNS.Model
 {
-    class TaiKhoanInfo
+    public class TaiKhoanInfo
     {
         private string iD;
         private string pass;
@@ -37,7 +37,6 @@ namespace QLNS.Model
 
         private string GetMd5Hash(MD5 md5Hash, string input)
         {
-
             byte[] data = md5Hash.ComputeHash(Encoding.UTF8.GetBytes(input));
             StringBuilder sBuilder = new StringBuilder();
             for (int i = 0; i < data.Length; i++)

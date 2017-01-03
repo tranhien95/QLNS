@@ -10,11 +10,14 @@ using System.Windows.Forms;
 using DevExpress.XtraBars;
 using DevExpress.XtraEditors;
 using DevExpress.XtraTab;
+using QLNS.Model;
 
 namespace QLNS.View
 {
     public partial class MainForm : DevExpress.XtraBars.Ribbon.RibbonForm
     {
+        private TaiKhoanInfo taikhoan = new TaiKhoanInfo();
+
         public MainForm()
         {
             InitializeComponent();
@@ -76,7 +79,8 @@ namespace QLNS.View
                 ChangeTypeMenu(frm.LoaiTK);
                 if(frm.LoaiTK>0)
                 {
-                    ribTaiKhoan.Text = frm.taikhoan;
+                    taikhoan = frm.taikhoan;
+                    ribTaiKhoan.Text = taikhoan.ID;
                 }
             }
         }
@@ -138,7 +142,19 @@ namespace QLNS.View
 
         private void btnDangXuat_ItemClick(object sender, ItemClickEventArgs e)
         {
+            xtcHDBH.TabPages.Clear();
             ChangeTypeMenu(0);
+        }
+
+        private void btnDoiMK_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            DoiMK doiMK = new DoiMK(taikhoan);
+            AddTabControl(doiMK, "Đổi MK");
+        }
+
+        private void barButtonItem4_ItemClick(object sender, ItemClickEventArgs e)
+        {
+
         }
     }
 }

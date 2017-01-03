@@ -16,7 +16,8 @@ namespace QLNS
     public partial class DangNhapFrm : DevExpress.XtraEditors.XtraForm
     {
         public int LoaiTK = 0;
-        public string taikhoan;
+
+        public TaiKhoanInfo taikhoan = new TaiKhoanInfo();
 
         private TaiKhoanDAO AccDAO = new TaiKhoanDAO();
 
@@ -38,7 +39,9 @@ namespace QLNS
             if (LoaiTK>0)
             {
                 MessageBox.Show(IDS_SUCCESS_LOGIN, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                taikhoan = txtTaiKhoan.Text;
+                taikhoan.ID = txtTaiKhoan.Text;
+                taikhoan.Pass = txtMatKhau.Text;
+                taikhoan.LoaiTK = LoaiTK;
                 this.Close();
             }
             else

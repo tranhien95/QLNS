@@ -116,6 +116,12 @@
     <Compile Include="View\DangNhap.Designer.cs">
       <DependentUpon>DangNhap.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\DoiMK.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\DoiMK.Designer.cs">
+      <DependentUpon>DoiMK.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\DVTThem.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -161,6 +167,9 @@
     </Compile>
     <EmbeddedResource Include="View\DangNhap.resx">
       <DependentUpon>DangNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\DoiMK.resx">
+      <DependentUpon>DoiMK.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\DVTThem.resx">
       <DependentUpon>DVTThem.cs</DependentUpon>
