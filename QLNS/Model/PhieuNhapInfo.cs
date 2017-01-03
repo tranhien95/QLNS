@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace QLNS.Model
 {
-    class PhieuNhapInfo
+    public class PhieuNhapInfo
     {
         private int maPhieu;
         private DateTime ngayLap;

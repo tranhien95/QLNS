@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace QLNS.Model
 {
-    class HoaDonInfo
+    public class HoaDonInfo
     {
         private int maDon;
         private DateTime ngayLap;

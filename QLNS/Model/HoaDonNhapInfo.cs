@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace QLNS.Model
 {
-    class HoaHDNNhapInfo
+    public class HoaHDNNhapInfo
     {
         private int maHDN;
         private int maNCC;

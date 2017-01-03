@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace QLNS.Model
 {
-    class DVTInfo
+    public class DVTInfo
     {
         private int maDVT;
         private string tenDVT;

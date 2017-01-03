@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace QLNS.Model
 {
-    class ChiPhiInfo
+    public class ChiPhiInfo
     {
         private int maCP;
         private string tenCP;

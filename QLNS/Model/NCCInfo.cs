@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace QLNS.Model
 {
-    class NCCInfo
+    public class NCCInfo
     {
         private int maNCC;
         private string tenNCC;

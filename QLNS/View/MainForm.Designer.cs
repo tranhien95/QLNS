@@ -225,6 +225,7 @@
             this.btnThemTK.Id = 15;
             this.btnThemTK.Name = "btnThemTK";
             this.btnThemTK.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.btnThemTK.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnThemTK_ItemClick);
             // 
             // barButtonItem10
             // 
@@ -241,7 +242,6 @@
             this.barButtonItem4.Id = 17;
             this.barButtonItem4.Name = "barButtonItem4";
             this.barButtonItem4.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
-            this.barButtonItem4.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem4_ItemClick);
             // 
             // barButtonItem5
             // 

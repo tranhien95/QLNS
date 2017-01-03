@@ -152,9 +152,10 @@ namespace QLNS.View
             AddTabControl(doiMK, "Đổi MK");
         }
 
-        private void barButtonItem4_ItemClick(object sender, ItemClickEventArgs e)
+        private void btnThemTK_ItemClick(object sender, ItemClickEventArgs e)
         {
-
+            ThemTK themTK = new ThemTK();
+            AddTabControl(themTK, "Thêm TK");
         }
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace QLNS.Model
 {
-    class SachInfo
+    public class SachInfo
     {
         private string maSach;
         private string tenSach;

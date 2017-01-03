@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace QLNS.Model
 {
-    class VanPhongPhamInfo
+    public class VanPhongPhamInfo
     {
         private string maVPP;
         private string tenVPP;

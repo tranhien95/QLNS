@@ -152,6 +152,12 @@
     <Compile Include="View\HoaDon.Designer.cs">
       <DependentUpon>HoaDon.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\ThemTK.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\ThemTK.Designer.cs">
+      <DependentUpon>ThemTK.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -185,6 +191,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\HoaDon.resx">
       <DependentUpon>HoaDon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ThemTK.resx">
+      <DependentUpon>ThemTK.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="App.config" />
     <None Include="Properties\Settings.settings">

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace QLNS.Model
 {
-    class CTHDInfo
+    public class CTHDInfo
     {
         private int maCTHD;
         private int maHD;
