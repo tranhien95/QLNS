@@ -11,12 +11,11 @@ namespace QLNS.Model
         private string maSach;
         private string tenSach;
         private string tacGia;
-        private long gia;
+        private double gia;
         private int soLuong;
         private int maNCC;
         private int lanTaiBan;
         private int maLoai;
-        private string maSachTT;
 
         public string MaSach
         {
@@ -36,7 +35,7 @@ namespace QLNS.Model
             set { tacGia = value; }
         }
 
-        public long Gia
+        public double Gia
         {
             get { return gia; }
             set { gia = value; }
@@ -66,10 +65,5 @@ namespace QLNS.Model
             set { maLoai = value; }
         }
 
-        public string MaSachTT
-        {
-            get { return maSachTT; }
-            set { maSachTT = value; }
-        }
     }
 }

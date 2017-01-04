@@ -11,6 +11,7 @@ using DevExpress.XtraBars;
 using DevExpress.XtraEditors;
 using DevExpress.XtraTab;
 using QLNS.Model;
+using QLNS.DAO;
 
 namespace QLNS.View
 {
@@ -156,6 +157,15 @@ namespace QLNS.View
         {
             ThemTK themTK = new ThemTK();
             AddTabControl(themTK, "Thêm TK");
+        }
+
+        private void barButtonItem5_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            HoaDonDAO hoadonDao = new HoaDonDAO();
+            HoaDonInfo hoadon = new HoaDonInfo();
+            HoaDonInfo[] hoadonArr;
+            hoadonArr = hoadonDao.SelectAll();
+            int a = hoadonDao.SelectMaxHD();
         }
     }
 }

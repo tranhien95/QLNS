@@ -9,7 +9,7 @@ namespace QLNS.Model
     public class HoaHDNNhapInfo
     {
         private int maHDN;
-        private int maNCC;
+        private int maPhieuNhap;
         private DateTime ngayLap;
         private long thanhTien;
 
@@ -21,8 +21,8 @@ namespace QLNS.Model
 
         public int MaNCC
         {
-            get { return maNCC; }
-            set { maNCC = value; }
+            get { return maPhieuNhap; }
+            set { maPhieuNhap = value; }
         }
 
         public DateTime NgayLap

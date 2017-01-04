@@ -30,7 +30,6 @@ namespace QLNS.DAO
                     vpp[i].Gia = (long)(gia);
                     vpp[i].SoLuong = int.Parse(row["SoLuong"].ToString());
                     vpp[i].MaNCC = int.Parse(row["MaNCC"].ToString());
-                    vpp[i].MaVPPTT = row["MaVPPTT"].ToString();
                     //Thêm một số thuộc tính
                     i++;
                 }

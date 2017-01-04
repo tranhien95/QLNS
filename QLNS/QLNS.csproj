@@ -82,7 +82,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AddTab.cs" />
+    <Compile Include="DAO\CTHDDAO.cs" />
     <Compile Include="DAO\DVTDAO.cs" />
+    <Compile Include="DAO\HoaDonDAO.cs" />
     <Compile Include="DAO\SachDAO.cs" />
     <Compile Include="DAO\TaiKhoanDAO.cs" />
     <Compile Include="DAO\BaseDAO.cs" />

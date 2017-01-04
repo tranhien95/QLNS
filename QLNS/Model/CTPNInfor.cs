@@ -12,7 +12,7 @@ namespace QLNS.Model
         private int maPN;
         private string maSP;
         private int soLuong;
-        private long giaUocTinh;
+        private double giaUocTinh;
 
         public int MaCTPN
         {
@@ -38,7 +38,7 @@ namespace QLNS.Model
             set { soLuong = value; }
         }
 
-        public long GiaUocTinh
+        public double GiaUocTinh
         {
             get { return giaUocTinh; }
             set { giaUocTinh = value; }

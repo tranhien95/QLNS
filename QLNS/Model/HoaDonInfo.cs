@@ -10,7 +10,7 @@ namespace QLNS.Model
     {
         private int maDon;
         private DateTime ngayLap;
-        private long tongTien;
+        private double tongTien;
 
         public int MaDon
         {
@@ -24,7 +24,7 @@ namespace QLNS.Model
             set { ngayLap = value; }
         }
 
-        public long TongTien
+        public double TongTien
         {
             get { return tongTien; }
             set { tongTien = value; }

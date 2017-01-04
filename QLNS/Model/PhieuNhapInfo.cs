@@ -11,7 +11,8 @@ namespace QLNS.Model
         private int maPhieu;
         private DateTime ngayLap;
         private int trangThai;
-        private long chiPhiUocTinh;
+        private double chiPhiUocTinh;
+        private int maNCC;
 
         public int MaPhieu
         {
@@ -31,10 +32,16 @@ namespace QLNS.Model
             set { trangThai = value; }
         }
 
-        public long ChiPhiUocTinh
+        public double ChiPhiUocTinh
         {
             get { return chiPhiUocTinh; }
             set { chiPhiUocTinh = value; }
+        }
+
+        public int MaNCC
+        {
+            get { return maNCC; }
+            set { maNCC = value; }
         }
 
     }
