@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace QLNS.Model
 {
-    public class HoaHDNNhapInfo
+    public class HoaDonNhapInfo
     {
         private int maHDN;
         private int maPhieuNhap;
         private DateTime ngayLap;
-        private long thanhTien;
+        private double thanhTien;
 
         public int MaHDN
         {
@@ -19,7 +19,7 @@ namespace QLNS.Model
             set { maHDN = value; }
         }
 
-        public int MaNCC
+        public int MaPN
         {
             get { return maPhieuNhap; }
             set { maPhieuNhap = value; }
@@ -31,7 +31,7 @@ namespace QLNS.Model
             set { ngayLap = value; }
         }
 
-        public long ThanhTien
+        public double ThanhTien
         {
             get { return thanhTien; }
             set { thanhTien = value; }

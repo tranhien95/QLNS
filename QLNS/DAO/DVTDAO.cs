@@ -28,8 +28,9 @@ namespace QLNS.DAO
                     dvt[i] = new DVTInfo();
                     dvt[i].MaDVT = int.Parse(row["MaDVT"].ToString());
                     dvt[i].TenDVT = row["TenDVT"].ToString();
-                    dvt[i].MaVPPLe = row["MaVPPLe"].ToString();
+                    dvt[i].MaVPPChan = row["MaVPPChan"].ToString();
                     dvt[i].SoLuongDoi = Int32.Parse(row["SoLuongDoi"].ToString());
+                    dvt[i].DaXoa = int.Parse(row["DaXoa"].ToString());
                     i++;
                 }
                 return dvt;
@@ -46,16 +47,18 @@ namespace QLNS.DAO
             try
             {
                 SqlCommand cmd = new SqlCommand();
-                cmd.CommandText = @"Insert Into DVT values(@MaDVT, @TenDVT, @MaVPPLe, @SoLuongDoi)";
+                cmd.CommandText = @"Insert Into DVT values(@MaDVT, @TenDVT, @MaVPPChan, @SoLuongDoi, @DaXoa)";
                 cmd.Parameters.Add("@MaDVT", SqlDbType.Char, 10);
                 cmd.Parameters.Add("@TenDVT", SqlDbType.NVarChar, 50);
-                cmd.Parameters.Add("@MaVPPLe", SqlDbType.Char, 10);
+                cmd.Parameters.Add("@MaVPPChan", SqlDbType.Char, 10);
                 cmd.Parameters.Add("@SoLuongDoi", SqlDbType.Int);
+                cmd.Parameters.Add("@DaXoa", SqlDbType.Int);
 
                 cmd.Parameters["@MaDVT"].Value = dvt.MaDVT;
                 cmd.Parameters["@TenDVT"].Value = dvt.TenDVT;
-                cmd.Parameters["@MaVPPLe"].Value = dvt.MaVPPLe;
+                cmd.Parameters["@MaVPPChan"].Value = dvt.MaVPPChan;
                 cmd.Parameters["@SoLuongDoi"].Value = dvt.SoLuongDoi;
+                cmd.Parameters["@DaXoa"].Value = dvt.DaXoa;
                 return Insert(cmd);
             }
             catch (SqlException e)
@@ -77,15 +80,18 @@ namespace QLNS.DAO
             try
             {
                 SqlCommand cmd = new SqlCommand();
-                cmd.CommandText = @"Update DVT set MaDVT = @MaDVT, TenDVT = @TenDVT, MaVPPLe = @MaVPPLe, SoLuongDoi = @SoLuongDoi where MaDVT = @MaDVT";
+                cmd.CommandText = @"Update DVT set MaDVT = @MaDVT, TenDVT = @TenDVT, MaVPPChan = @MaVPPChan, SoLuongDoi = @SoLuongDoi, DaXoa = @DaXoa where MaDVT = @MaDVT";
                 cmd.Parameters.Add("@MaDVT", SqlDbType.Char, 10);
-                cmd.Parameters["@MaDVT"].Value = dvt.MaDVT;
                 cmd.Parameters.Add("@TenDVT", SqlDbType.NVarChar, 50);
-                cmd.Parameters["@TenDVT"].Value = dvt.TenDVT;
-                cmd.Parameters.Add("@MaVPPLe", SqlDbType.Char, 10);
-                cmd.Parameters["@MaVPPLe"].Value = dvt.MaVPPLe;
+                cmd.Parameters.Add("@MaVPPChan", SqlDbType.Char, 10);
                 cmd.Parameters.Add("@SoLuongDoi", SqlDbType.Int);
+                cmd.Parameters.Add("@DaXoa", SqlDbType.Int);
+
+                cmd.Parameters["@MaDVT"].Value = dvt.MaDVT;
+                cmd.Parameters["@TenDVT"].Value = dvt.TenDVT;
+                cmd.Parameters["@MaVPPChan"].Value = dvt.MaVPPChan;
                 cmd.Parameters["@SoLuongDoi"].Value = dvt.SoLuongDoi;
+                cmd.Parameters["@DaXoa"].Value = dvt.DaXoa;
                 return Update(cmd);
             }
             catch (Exception e)
@@ -129,8 +135,9 @@ namespace QLNS.DAO
                     dvt[i] = new DVTInfo();
                     dvt[i].MaDVT = int.Parse(row["MaDVT"].ToString());
                     dvt[i].TenDVT = row["TenDVT"].ToString();
-                    dvt[i].MaVPPLe = row["MaVPPLe"].ToString();
+                    dvt[i].MaVPPChan = row["MaVPPChan"].ToString();
                     dvt[i].SoLuongDoi = Int32.Parse(row["SoLuongDoi"].ToString());
+                    dvt[i].DaXoa = int.Parse(row["DaXoa"].ToString());
                     i++;
                 }
                 return dvt;
@@ -153,8 +160,9 @@ namespace QLNS.DAO
                 DVTInfo dvt = new DVTInfo();
                 dvt.MaDVT = int.Parse(dt.Rows[0]["MaDVT"].ToString());
                 dvt.TenDVT = dt.Rows[0]["TenDVT"].ToString();
-                dvt.MaVPPLe = dt.Rows[0]["MaVPPLe"].ToString();
+                dvt.MaVPPChan = dt.Rows[0]["MaVPPChan"].ToString();
                 dvt.SoLuongDoi = Int32.Parse(dt.Rows[0]["SoLuongDoi"].ToString());
+                dvt.DaXoa = int.Parse(dt.Rows[0]["DaXoa"].ToString());
                 return dvt;
             }
             catch (SqlException e)

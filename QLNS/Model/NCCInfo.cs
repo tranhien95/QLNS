@@ -10,8 +10,8 @@ namespace QLNS.Model
     {
         private int maNCC;
         private string tenNCC;
-        private string maVPPLe;
-        private int soLuongDoi;
+        float chietKhau;
+        int daXoa;
 
         public int MaNCC
         {
@@ -25,16 +25,16 @@ namespace QLNS.Model
             set { tenNCC = value; }
         }
 
-        public int SoLuongDoi
+        public float ChietKhau
         {
-            get { return soLuongDoi; }
-            set { soLuongDoi = value; }
+            get { return chietKhau; }
+            set { chietKhau = value; }
         }
 
-        public string MaVPPLe
+        public int DaXoa
         {
-            get { return maVPPLe; }
-            set { maVPPLe = value; }
+            get { return daXoa; }
+            set { daXoa = value; }
         }
 
     }

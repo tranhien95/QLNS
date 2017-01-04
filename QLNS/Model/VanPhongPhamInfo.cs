@@ -10,9 +10,12 @@ namespace QLNS.Model
     {
         private string maVPP;
         private string tenVPP;
+        private string tenNSX;
         private double gia;
         private int soLuong;
         private int maNCC;
+        private int daXoa;
+        private int maDVT;
 
         public string MaVPP
         {
@@ -44,5 +47,22 @@ namespace QLNS.Model
             set { maNCC = value; }
         }
 
+        public int DaXoa
+        {
+            get { return daXoa; }
+            set { daXoa = value; }
+        }
+
+        public int MaDVT
+        {
+            get { return maDVT; }
+            set { maDVT = value; }
+        }
+
+        public string TenNSX
+        {
+            get { return tenNSX; }
+            set { tenNSX = value; }
+        }
     }
 }

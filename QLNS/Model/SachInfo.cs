@@ -16,6 +16,7 @@ namespace QLNS.Model
         private int maNCC;
         private int lanTaiBan;
         private int maLoai;
+        private int daXoa;
 
         public string MaSach
         {
@@ -63,6 +64,12 @@ namespace QLNS.Model
         {
             get { return maLoai; }
             set { maLoai = value; }
+        }
+
+        public int DaXoa
+        {
+            get { return daXoa; }
+            set { daXoa = value; }
         }
 
     }

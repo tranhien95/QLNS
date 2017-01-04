@@ -12,6 +12,7 @@ namespace QLNS.Model
         private int maHD;
         private string maSP;
         private int soLuong;
+        private double tongTien;
 
         public int MaCTHD
         {
@@ -35,6 +36,12 @@ namespace QLNS.Model
         {
             get { return soLuong; }
             set { soLuong = value; }
+        }
+
+        public double TongTien
+        {
+            get { return tongTien; }
+            set { tongTien = value; }
         }
     }
 }

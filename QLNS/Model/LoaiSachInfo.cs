@@ -10,6 +10,7 @@ namespace QLNS.Model
     {
         private int maLoai;
         private string tenLoai;
+        private int daXoa;
 
         public int MaLoai
         {
@@ -21,6 +22,12 @@ namespace QLNS.Model
         {
             get { return tenLoai; }
             set { tenLoai = value; }
+        }
+
+        public int DaXoa
+        {
+            get { return daXoa; }
+            set { daXoa = value; }
         }
     }
 }

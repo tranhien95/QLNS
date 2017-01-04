@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace QLNS.Model
 {
-    public class CTPNInfor
+    public class CTPNInfo
     {
         private int maCTPN;
         private int maPN;

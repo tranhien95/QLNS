@@ -11,7 +11,7 @@ namespace QLNS.Model
         private int maCP;
         private string tenCP;
         private DateTime ngayLap;
-        private long soTien;
+        private double soTien;
 
         public int MaCP
         {
@@ -31,7 +31,7 @@ namespace QLNS.Model
             set { ngayLap = value; }
         }
 
-        public long SoTien
+        public double SoTien
         {
             get { return soTien; }
             set { soTien = value; }

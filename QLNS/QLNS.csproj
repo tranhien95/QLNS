@@ -82,9 +82,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AddTab.cs" />
+    <Compile Include="DAO\ChiPhiDAO.cs" />
     <Compile Include="DAO\CTHDDAO.cs" />
+    <Compile Include="DAO\CTPNDAO.cs" />
     <Compile Include="DAO\DVTDAO.cs" />
     <Compile Include="DAO\HoaDonDAO.cs" />
+    <Compile Include="DAO\HoaDonNhapDAO.cs" />
+    <Compile Include="DAO\LoaiSachDAO.cs" />
+    <Compile Include="DAO\NCCDAO.cs" />
+    <Compile Include="DAO\PhieuNhapDAO.cs" />
     <Compile Include="DAO\SachDAO.cs" />
     <Compile Include="DAO\TaiKhoanDAO.cs" />
     <Compile Include="DAO\BaseDAO.cs" />
@@ -98,7 +104,7 @@
     </Compile>
     <Compile Include="Model\ChiPhiInfo.cs" />
     <Compile Include="Model\CTHDInfo.cs" />
-    <Compile Include="Model\CTPNInfor.cs" />
+    <Compile Include="Model\CTPNInfo.cs" />
     <Compile Include="Model\DVTInfo.cs" />
     <Compile Include="Model\HoaDonInfo.cs" />
     <Compile Include="Model\HoaDonNhapInfo.cs" />
