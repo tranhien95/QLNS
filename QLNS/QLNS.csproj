@@ -124,6 +124,18 @@
     <Compile Include="View\DangNhap.Designer.cs">
       <DependentUpon>DangNhap.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\DanhSachHoaDonNhap.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\DanhSachHoaDonNhap.Designer.cs">
+      <DependentUpon>DanhSachHoaDonNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\DanhSachPhieuNhap.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\DanhSachPhieuNhap.Designer.cs">
+      <DependentUpon>DanhSachPhieuNhap.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\DoiMK.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -160,6 +172,18 @@
     <Compile Include="View\HoaDon.Designer.cs">
       <DependentUpon>HoaDon.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\ThemMoiHoaDonNhap.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\ThemMoiHoaDonNhap.Designer.cs">
+      <DependentUpon>ThemMoiHoaDonNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ThemMoiPhieuNhap.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\ThemMoiPhieuNhap.Designer.cs">
+      <DependentUpon>ThemMoiPhieuNhap.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\ThemTK.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -182,6 +206,12 @@
     <EmbeddedResource Include="View\DangNhap.resx">
       <DependentUpon>DangNhap.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\DanhSachHoaDonNhap.resx">
+      <DependentUpon>DanhSachHoaDonNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\DanhSachPhieuNhap.resx">
+      <DependentUpon>DanhSachPhieuNhap.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\DoiMK.resx">
       <DependentUpon>DoiMK.cs</DependentUpon>
     </EmbeddedResource>
@@ -199,6 +229,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\HoaDon.resx">
       <DependentUpon>HoaDon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ThemMoiHoaDonNhap.resx">
+      <DependentUpon>ThemMoiHoaDonNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ThemMoiPhieuNhap.resx">
+      <DependentUpon>ThemMoiPhieuNhap.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\ThemTK.resx">
       <DependentUpon>ThemTK.cs</DependentUpon>

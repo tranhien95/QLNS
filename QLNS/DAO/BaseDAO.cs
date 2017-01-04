@@ -90,7 +90,8 @@ namespace QLNS.DAO
                 adapter.SelectCommand = command;
                 DataTable dt = new DataTable();
                 adapter.Fill(dt);
-                str = dt.Rows[0][ColumnName].ToString();
+                if (dt.Rows.Count != 0)    
+                    str = dt.Rows[0][ColumnName].ToString();
                 return str;
             }
             catch (SqlException e)

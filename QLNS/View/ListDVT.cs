@@ -36,7 +36,7 @@ namespace QLNS.View
 
                 gvDVT.SetRowCellValue(newRowHandle, gvDVT.Columns[0], dvtArr[i].MaDVT);
                 gvDVT.SetRowCellValue(newRowHandle, gvDVT.Columns[1], dvtArr[i].TenDVT);
-                gvDVT.SetRowCellValue(newRowHandle, gvDVT.Columns[2], dvtArr[i].MaVPPLe);
+                gvDVT.SetRowCellValue(newRowHandle, gvDVT.Columns[2], dvtArr[i].MaVPPChan);
                 gvDVT.SetRowCellValue(newRowHandle, gvDVT.Columns[3], dvtArr[i].SoLuongDoi);
                 gvDVT.UpdateCurrentRow();
                 gvDVT.RefreshData();
@@ -76,7 +76,7 @@ namespace QLNS.View
 
                 gvDVT.SetRowCellValue(newRowHandle, gvDVT.Columns[0], dvtArr[i].MaDVT);
                 gvDVT.SetRowCellValue(newRowHandle, gvDVT.Columns[1], dvtArr[i].TenDVT);
-                gvDVT.SetRowCellValue(newRowHandle, gvDVT.Columns[2], dvtArr[i].MaVPPLe);
+                gvDVT.SetRowCellValue(newRowHandle, gvDVT.Columns[2], dvtArr[i].MaVPPChan);
                 gvDVT.SetRowCellValue(newRowHandle, gvDVT.Columns[3], dvtArr[i].SoLuongDoi);
                 gvDVT.UpdateCurrentRow();
                 gvDVT.RefreshData();
@@ -94,7 +94,7 @@ namespace QLNS.View
 
                 gvDVT.SetRowCellValue(newRowHandle, gvDVT.Columns[0], dvtArr[i].MaDVT);
                 gvDVT.SetRowCellValue(newRowHandle, gvDVT.Columns[1], dvtArr[i].TenDVT);
-                gvDVT.SetRowCellValue(newRowHandle, gvDVT.Columns[2], dvtArr[i].MaVPPLe);
+                gvDVT.SetRowCellValue(newRowHandle, gvDVT.Columns[2], dvtArr[i].MaVPPChan);
                 gvDVT.SetRowCellValue(newRowHandle, gvDVT.Columns[3], dvtArr[i].SoLuongDoi);
                 gvDVT.UpdateCurrentRow();
                 gvDVT.RefreshData();

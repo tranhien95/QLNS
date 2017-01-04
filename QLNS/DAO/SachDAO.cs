@@ -189,5 +189,20 @@ namespace QLNS.DAO
                 return null;
             }
         }
+
+        public DataTable TimSachTheoNCC(int mancc)
+        {
+            try
+            {
+                SqlCommand cmd = new SqlCommand();
+                cmd.CommandText = @"Select * from SACH Where DaXoa = 0 AND MaNCC = " + mancc;
+                DataTable dt = GetTable(cmd, "SACH");
+                return dt;
+            }
+            catch (Exception e)
+            {
+                return null;
+            }
+        }
     }
 }
