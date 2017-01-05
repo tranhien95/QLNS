@@ -14,26 +14,27 @@ namespace QLNS.DAO
     {
 
         //Lấy hết bảng NCC
-        public NCCInfo[] SelectAll()
+        public DataTable SelectAll()
         {
             DataTable dt;
             int i = 0;
             try
             {
                 SqlCommand cmd = new SqlCommand();
-                cmd.CommandText = @"Select * from NCC";
+                cmd.CommandText = @"Select * from NCC Where DaXoa = 0";
                 dt = GetTable(cmd, "NCC");
-                NCCInfo[] ncc = new NCCInfo[dt.Rows.Count];
-                foreach (DataRow row in dt.Rows)
-                {
-                    ncc[i] = new NCCInfo();
-                    ncc[i].MaNCC = int.Parse(row["MaNCC"].ToString());
-                    ncc[i].TenNCC = row["TenNCC"].ToString();
-                    ncc[i].ChietKhau = float.Parse(row["ChietKhau"].ToString());
-                    ncc[i].DaXoa = int.Parse(row["DaXoa"].ToString());
-                    i++;
-                }
-                return ncc;
+                //NCCInfo[] ncc = new NCCInfo[dt.Rows.Count];
+                //foreach (DataRow row in dt.Rows)
+                //{
+                //    ncc[i] = new NCCInfo();
+                //    ncc[i].MaNCC = int.Parse(row["MaNCC"].ToString());
+                //    ncc[i].TenNCC = row["TenNCC"].ToString();
+                //    ncc[i].ChietKhau = float.Parse(row["ChietKhau"].ToString());
+                //    ncc[i].DaXoa = int.Parse(row["DaXoa"].ToString());
+                //    i++;
+                //}
+                //return ncc;
+                return dt;
             }
             catch (SqlException e)
             {

@@ -168,5 +168,11 @@ namespace QLNS.View
             hoadonArr = hoadonDao.SelectAll();
             int a = hoadonDao.SelectMaxHD();
         }
+
+        private void btnThemPhieuNhap_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            ThemMoiPhieuNhap themPN = new ThemMoiPhieuNhap();
+            AddTabControl(themPN, "Thêm mới phiếu nhập");
+        }
     }
 }
