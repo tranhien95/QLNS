@@ -26,7 +26,8 @@ namespace QLNS.View
 
         private void btnThem_ItemClick(object sender, ItemClickEventArgs e)
         {
-
+            HoaDon hoadonForm = new HoaDon();
+            hoadonForm.ShowDialog();
         }
 
         private void btnDSDVT_ItemClick(object sender, ItemClickEventArgs e)

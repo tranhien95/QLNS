@@ -164,7 +164,7 @@ namespace QLNS.DAO
             }
         }
 
-        public SachInfo GetOne(int masach)
+        public SachInfo GetOne(String masach)
         {
             DataTable dt;
             try

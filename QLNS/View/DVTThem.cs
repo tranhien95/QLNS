@@ -57,7 +57,7 @@ namespace QLNS.View
                     DvtInfo.MaDVT = DvtDAO.SelectMaxDVT() + 1;
                     DvtInfo.TenDVT = txtTenDVT.Text;
                     DvtInfo.SoLuongDoi = int.Parse(txtSoLuongDoi.Text);
-                    DvtInfo.MaVPPLe = VppArr[cbbMaSPLe.SelectedIndex].MaVPP;
+                    DvtInfo.MaVPPChan = VppArr[cbbMaSPLe.SelectedIndex].MaVPP;
                     DvtDAO.Insert(DvtInfo);
                     MessageBox.Show("Thêm thành công.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     txtSoLuongDoi.Text = "";

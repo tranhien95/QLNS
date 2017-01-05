@@ -160,13 +160,14 @@ namespace QLNS.DAO
             }
         }
 
-        public VanPhongPhamInfo GetOne(int mavpp)
+        public VanPhongPhamInfo GetOne(string mavpp)
         {
             DataTable dt;
             try
             {
                 SqlCommand cmd = new SqlCommand();
-                cmd.CommandText = @"Select * from VANPHONGPHAM where MaVPP = " + mavpp.ToString();
+                //cmd.CommandText = @"Select * from VANPHONGPHAM where MaVPP = " + mavpp;
+                cmd.CommandText = @"Select * from VANPHONGPHAM where MaVPP = '" + mavpp + "'";
                 dt = GetTable(cmd, "VANPHONGPHAM");
                 VanPhongPhamInfo vpp = new VanPhongPhamInfo();
                 vpp.MaVPP = dt.Rows[0]["MaVPP"].ToString();
@@ -175,7 +176,11 @@ namespace QLNS.DAO
                 vpp.SoLuong = int.Parse(dt.Rows[0]["SoLuong"].ToString());
                 vpp.MaNCC = int.Parse(dt.Rows[0]["MaNCC"].ToString());
                 vpp.DaXoa = int.Parse(dt.Rows[0]["DaXoa"].ToString());
-                vpp.MaDVT = int.Parse(dt.Rows[0]["MaDVT"].ToString());
+                if (dt.Rows[0]["MaDVT"].ToString() != "")
+                {
+                    vpp.MaDVT = int.Parse(dt.Rows[0]["MaDVT"].ToString());
+                }
+                
                 vpp.TenNSX = dt.Rows[0]["TenNSX"].ToString();
                 return vpp;
             }

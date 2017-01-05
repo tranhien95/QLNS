@@ -36,16 +36,16 @@
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
             this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
-            this.textEdit7 = new DevExpress.XtraEditors.TextEdit();
+            this.SoLuongMua = new DevExpress.XtraEditors.TextEdit();
             this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
-            this.textEdit5 = new DevExpress.XtraEditors.TextEdit();
+            this._SoLuongCon = new DevExpress.XtraEditors.TextEdit();
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
-            this.textEdit6 = new DevExpress.XtraEditors.TextEdit();
+            this._GiaSP = new DevExpress.XtraEditors.TextEdit();
             this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
-            this.textEdit4 = new DevExpress.XtraEditors.TextEdit();
+            this._MaSp = new DevExpress.XtraEditors.TextEdit();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
             this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
-            this.textEdit3 = new DevExpress.XtraEditors.TextEdit();
+            this._TenSP = new DevExpress.XtraEditors.TextEdit();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.groupControl3 = new DevExpress.XtraEditors.GroupControl();
             this.textEdit8 = new DevExpress.XtraEditors.TextEdit();
@@ -67,11 +67,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit7.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit5.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit6.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit4.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SoLuongMua.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this._SoLuongCon.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this._GiaSP.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this._MaSp.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this._TenSP.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).BeginInit();
             this.groupControl3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit8.Properties)).BeginInit();
@@ -111,6 +111,7 @@
             this.simpleButton1.Size = new System.Drawing.Size(75, 23);
             this.simpleButton1.TabIndex = 3;
             this.simpleButton1.Text = "Tìm Kiếm";
+            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
             // 
             // textEdit2
             // 
@@ -123,23 +124,23 @@
             // 
             this.labelControl2.Location = new System.Drawing.Point(5, 47);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(22, 13);
+            this.labelControl2.Size = new System.Drawing.Size(71, 13);
             this.labelControl2.TabIndex = 1;
-            this.labelControl2.Text = "Tên:";
+            this.labelControl2.Text = "Tên sản phẩm:";
             // 
             // groupControl2
             // 
             this.groupControl2.Controls.Add(this.simpleButton3);
-            this.groupControl2.Controls.Add(this.textEdit7);
+            this.groupControl2.Controls.Add(this.SoLuongMua);
             this.groupControl2.Controls.Add(this.labelControl7);
-            this.groupControl2.Controls.Add(this.textEdit5);
+            this.groupControl2.Controls.Add(this._SoLuongCon);
             this.groupControl2.Controls.Add(this.labelControl5);
-            this.groupControl2.Controls.Add(this.textEdit6);
+            this.groupControl2.Controls.Add(this._GiaSP);
             this.groupControl2.Controls.Add(this.labelControl6);
-            this.groupControl2.Controls.Add(this.textEdit4);
+            this.groupControl2.Controls.Add(this._MaSp);
             this.groupControl2.Controls.Add(this.labelControl4);
             this.groupControl2.Controls.Add(this.simpleButton2);
-            this.groupControl2.Controls.Add(this.textEdit3);
+            this.groupControl2.Controls.Add(this._TenSP);
             this.groupControl2.Controls.Add(this.labelControl3);
             this.groupControl2.Location = new System.Drawing.Point(24, 211);
             this.groupControl2.Name = "groupControl2";
@@ -155,12 +156,12 @@
             this.simpleButton3.TabIndex = 12;
             this.simpleButton3.Text = "Xóa";
             // 
-            // textEdit7
+            // SoLuongMua
             // 
-            this.textEdit7.Location = new System.Drawing.Point(106, 238);
-            this.textEdit7.Name = "textEdit7";
-            this.textEdit7.Size = new System.Drawing.Size(275, 20);
-            this.textEdit7.TabIndex = 11;
+            this.SoLuongMua.Location = new System.Drawing.Point(106, 238);
+            this.SoLuongMua.Name = "SoLuongMua";
+            this.SoLuongMua.Size = new System.Drawing.Size(275, 20);
+            this.SoLuongMua.TabIndex = 11;
             // 
             // labelControl7
             // 
@@ -170,12 +171,12 @@
             this.labelControl7.TabIndex = 10;
             this.labelControl7.Text = "Số Lượng Mua:";
             // 
-            // textEdit5
+            // _SoLuongCon
             // 
-            this.textEdit5.Location = new System.Drawing.Point(106, 188);
-            this.textEdit5.Name = "textEdit5";
-            this.textEdit5.Size = new System.Drawing.Size(275, 20);
-            this.textEdit5.TabIndex = 9;
+            this._SoLuongCon.Location = new System.Drawing.Point(106, 188);
+            this._SoLuongCon.Name = "_SoLuongCon";
+            this._SoLuongCon.Size = new System.Drawing.Size(275, 20);
+            this._SoLuongCon.TabIndex = 9;
             // 
             // labelControl5
             // 
@@ -185,12 +186,12 @@
             this.labelControl5.TabIndex = 8;
             this.labelControl5.Text = "Số Lượng Còn:";
             // 
-            // textEdit6
+            // _GiaSP
             // 
-            this.textEdit6.Location = new System.Drawing.Point(106, 140);
-            this.textEdit6.Name = "textEdit6";
-            this.textEdit6.Size = new System.Drawing.Size(275, 20);
-            this.textEdit6.TabIndex = 7;
+            this._GiaSP.Location = new System.Drawing.Point(106, 140);
+            this._GiaSP.Name = "_GiaSP";
+            this._GiaSP.Size = new System.Drawing.Size(275, 20);
+            this._GiaSP.TabIndex = 7;
             // 
             // labelControl6
             // 
@@ -200,12 +201,12 @@
             this.labelControl6.TabIndex = 6;
             this.labelControl6.Text = "Giá:";
             // 
-            // textEdit4
+            // _MaSp
             // 
-            this.textEdit4.Location = new System.Drawing.Point(106, 92);
-            this.textEdit4.Name = "textEdit4";
-            this.textEdit4.Size = new System.Drawing.Size(275, 20);
-            this.textEdit4.TabIndex = 5;
+            this._MaSp.Location = new System.Drawing.Point(106, 92);
+            this._MaSp.Name = "_MaSp";
+            this._MaSp.Size = new System.Drawing.Size(275, 20);
+            this._MaSp.TabIndex = 5;
             // 
             // labelControl4
             // 
@@ -223,12 +224,12 @@
             this.simpleButton2.TabIndex = 3;
             this.simpleButton2.Text = "Thêm";
             // 
-            // textEdit3
+            // _TenSP
             // 
-            this.textEdit3.Location = new System.Drawing.Point(106, 45);
-            this.textEdit3.Name = "textEdit3";
-            this.textEdit3.Size = new System.Drawing.Size(275, 20);
-            this.textEdit3.TabIndex = 2;
+            this._TenSP.Location = new System.Drawing.Point(106, 45);
+            this._TenSP.Name = "_TenSP";
+            this._TenSP.Size = new System.Drawing.Size(275, 20);
+            this._TenSP.TabIndex = 2;
             // 
             // labelControl3
             // 
@@ -370,11 +371,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
             this.groupControl2.ResumeLayout(false);
             this.groupControl2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit7.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit5.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit6.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit4.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SoLuongMua.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this._SoLuongCon.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this._GiaSP.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this._MaSp.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this._TenSP.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).EndInit();
             this.groupControl3.ResumeLayout(false);
             this.groupControl3.PerformLayout();
@@ -395,16 +396,16 @@
         private DevExpress.XtraEditors.LabelControl labelControl2;
         private DevExpress.XtraEditors.GroupControl groupControl2;
         private DevExpress.XtraEditors.SimpleButton simpleButton3;
-        private DevExpress.XtraEditors.TextEdit textEdit7;
+        private DevExpress.XtraEditors.TextEdit SoLuongMua;
         private DevExpress.XtraEditors.LabelControl labelControl7;
-        private DevExpress.XtraEditors.TextEdit textEdit5;
+        private DevExpress.XtraEditors.TextEdit _SoLuongCon;
         private DevExpress.XtraEditors.LabelControl labelControl5;
-        private DevExpress.XtraEditors.TextEdit textEdit6;
+        private DevExpress.XtraEditors.TextEdit _GiaSP;
         private DevExpress.XtraEditors.LabelControl labelControl6;
-        private DevExpress.XtraEditors.TextEdit textEdit4;
+        private DevExpress.XtraEditors.TextEdit _MaSp;
         private DevExpress.XtraEditors.LabelControl labelControl4;
         private DevExpress.XtraEditors.SimpleButton simpleButton2;
-        private DevExpress.XtraEditors.TextEdit textEdit3;
+        private DevExpress.XtraEditors.TextEdit _TenSP;
         private DevExpress.XtraEditors.LabelControl labelControl3;
         private DevExpress.XtraEditors.GroupControl groupControl3;
         private DevExpress.XtraEditors.TextEdit textEdit8;
