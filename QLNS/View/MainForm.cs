@@ -174,5 +174,10 @@ namespace QLNS.View
             ThemMoiPhieuNhap themPN = new ThemMoiPhieuNhap();
             AddTabControl(themPN, "Thêm mới phiếu nhập");
         }
+
+        private void barButtonItem10_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            new DanhSachHoaDon().ShowDialog();
+        }
     }
 }

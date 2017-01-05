@@ -32,7 +32,10 @@ namespace QLNS.DAO
                     vpp[i].SoLuong = int.Parse(row["SoLuong"].ToString());
                     vpp[i].MaNCC = int.Parse(row["MaNCC"].ToString());
                     vpp[i].DaXoa = int.Parse(row["DaXoa"].ToString());
-                    vpp[i].MaDVT = int.Parse(row["MaDVT"].ToString());
+                    if (row["MaDVT"].ToString() != "")
+                    {
+                        vpp[i].MaDVT = int.Parse(row["MaDVT"].ToString());
+                    }
                     vpp[i].TenNSX = row["TenNSX"].ToString();
                     //Thêm một số thuộc tính
                     i++;
@@ -85,8 +88,8 @@ namespace QLNS.DAO
             try
             {
                 SqlCommand cmd = new SqlCommand();
-                cmd.CommandText = @"Update VANPHONGPHAM set MaVPP = @MaVPP, TenVPP = @TenVPP, Gia = @Gia, SoLuong = @SoLuong, MaDVT = @MaDVT, MaNCC = @MaNCC, TenNSX = @TenNSX, DaXoa = @DaXoa where MaDVT = @MaDVT";
-                cmd.Parameters.Add("@MaVPP", SqlDbType.Int);
+                cmd.CommandText = @"Update VANPHONGPHAM set MaVPP = @MaVPP, TenVPP = @TenVPP, Gia = @Gia, SoLuong = @SoLuong, MaDVT = @MaDVT, MaNCC = @MaNCC, TenNSX = @TenNSX, DaXoa = @DaXoa where MaVPP = @MaVPP";
+                cmd.Parameters.Add("@MaVPP", SqlDbType.Char, 10);
                 cmd.Parameters.Add("@TenVPP", SqlDbType.NVarChar, 50);
                 cmd.Parameters.Add("@Gia", SqlDbType.Money);
                 cmd.Parameters.Add("@SoLuong", SqlDbType.Int);

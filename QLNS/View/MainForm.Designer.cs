@@ -48,6 +48,8 @@
             this.barButtonItem10 = new DevExpress.XtraBars.BarButtonItem();
             this.btnThemHoaDonNhap = new DevExpress.XtraBars.BarButtonItem();
             this.btnDanhSachHoaDonNhap = new DevExpress.XtraBars.BarButtonItem();
+            this.btnThemPhieuNhap = new DevExpress.XtraBars.BarButtonItem();
+            this.btnDanhSachPhieuNhap = new DevExpress.XtraBars.BarButtonItem();
             this.ribHoaDon = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup7 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -56,6 +58,7 @@
             this.ribbonPageGroup4 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribChiPhi = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribPhieuNhap = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.ribbonPageGroup8 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribBaoCao = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribLoaiSach = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribNCC = new DevExpress.XtraBars.Ribbon.RibbonPage();
@@ -67,9 +70,6 @@
             this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.xtcHDBH = new DevExpress.XtraTab.XtraTabControl();
             this.defaultLookAndFeel1 = new DevExpress.LookAndFeel.DefaultLookAndFeel(this.components);
-            this.ribbonPageGroup8 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.btnThemPhieuNhap = new DevExpress.XtraBars.BarButtonItem();
-            this.btnDanhSachPhieuNhap = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtcHDBH)).BeginInit();
             this.SuspendLayout();
@@ -239,6 +239,7 @@
             this.barButtonItem10.Id = 16;
             this.barButtonItem10.Name = "barButtonItem10";
             this.barButtonItem10.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.barButtonItem10.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem10_ItemClick);
             // 
             // btnThemHoaDonNhap
             // 
@@ -256,6 +257,23 @@
             this.btnDanhSachHoaDonNhap.Name = "btnDanhSachHoaDonNhap";
             this.btnDanhSachHoaDonNhap.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             this.btnDanhSachHoaDonNhap.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem5_ItemClick);
+            // 
+            // btnThemPhieuNhap
+            // 
+            this.btnThemPhieuNhap.Caption = "Thêm mới";
+            this.btnThemPhieuNhap.Glyph = ((System.Drawing.Image)(resources.GetObject("btnThemPhieuNhap.Glyph")));
+            this.btnThemPhieuNhap.Id = 19;
+            this.btnThemPhieuNhap.Name = "btnThemPhieuNhap";
+            this.btnThemPhieuNhap.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.btnThemPhieuNhap.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnThemPhieuNhap_ItemClick);
+            // 
+            // btnDanhSachPhieuNhap
+            // 
+            this.btnDanhSachPhieuNhap.Caption = "Danh sách phiếu nhập";
+            this.btnDanhSachPhieuNhap.Glyph = ((System.Drawing.Image)(resources.GetObject("btnDanhSachPhieuNhap.Glyph")));
+            this.btnDanhSachPhieuNhap.Id = 20;
+            this.btnDanhSachPhieuNhap.Name = "btnDanhSachPhieuNhap";
+            this.btnDanhSachPhieuNhap.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             // 
             // ribHoaDon
             // 
@@ -324,6 +342,13 @@
             this.ribPhieuNhap.Image = ((System.Drawing.Image)(resources.GetObject("ribPhieuNhap.Image")));
             this.ribPhieuNhap.Name = "ribPhieuNhap";
             this.ribPhieuNhap.Text = "Phiếu Nhập";
+            // 
+            // ribbonPageGroup8
+            // 
+            this.ribbonPageGroup8.ItemLinks.Add(this.btnThemPhieuNhap);
+            this.ribbonPageGroup8.ItemLinks.Add(this.btnDanhSachPhieuNhap);
+            this.ribbonPageGroup8.Name = "ribbonPageGroup8";
+            this.ribbonPageGroup8.Text = "Phiếu Nhập";
             // 
             // ribBaoCao
             // 
@@ -411,30 +436,6 @@
             this.xtcHDBH.TabIndex = 2;
             this.xtcHDBH.CloseButtonClick += new System.EventHandler(this.xtraTabControl1_CloseButtonClick);
             this.xtcHDBH.ControlAdded += new System.Windows.Forms.ControlEventHandler(this.xtraTabControl1_ControlAdded);
-            // 
-            // ribbonPageGroup8
-            // 
-            this.ribbonPageGroup8.ItemLinks.Add(this.btnThemPhieuNhap);
-            this.ribbonPageGroup8.ItemLinks.Add(this.btnDanhSachPhieuNhap);
-            this.ribbonPageGroup8.Name = "ribbonPageGroup8";
-            this.ribbonPageGroup8.Text = "Phiếu Nhập";
-            // 
-            // btnThemPhieuNhap
-            // 
-            this.btnThemPhieuNhap.Caption = "Thêm mới";
-            this.btnThemPhieuNhap.Glyph = ((System.Drawing.Image)(resources.GetObject("btnThemPhieuNhap.Glyph")));
-            this.btnThemPhieuNhap.Id = 19;
-            this.btnThemPhieuNhap.Name = "btnThemPhieuNhap";
-            this.btnThemPhieuNhap.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
-            this.btnThemPhieuNhap.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnThemPhieuNhap_ItemClick);
-            // 
-            // btnDanhSachPhieuNhap
-            // 
-            this.btnDanhSachPhieuNhap.Caption = "Danh sách phiếu nhập";
-            this.btnDanhSachPhieuNhap.Glyph = ((System.Drawing.Image)(resources.GetObject("btnDanhSachPhieuNhap.Glyph")));
-            this.btnDanhSachPhieuNhap.Id = 20;
-            this.btnDanhSachPhieuNhap.Name = "btnDanhSachPhieuNhap";
-            this.btnDanhSachPhieuNhap.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             // 
             // MainForm
             // 

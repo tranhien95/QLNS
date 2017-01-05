@@ -86,9 +86,8 @@ namespace QLNS.DAO
             try
             {
                 SqlCommand cmd = new SqlCommand();
-                cmd.CommandText = @"Update SACH set MaSach = @MaSach, TenSach = @TenSach, Gia = @Gia, SoLuong = @SoLuong, TacGia = @TacGia, MaNCC = @MaNCC, LanTaiBan = @LanTaiBan, MaLoai = @MaLoai, DaXoa = @DaXoa where MaDVT = @MaDVT";
-                cmd.CommandText = @"Insert Into SACH values(@MaSach, @TenSach, @Gia, @SoLuong, @TacGia, @MaNCC, @LanTaiBan, @MaLoai, @DaXoa)";
-                cmd.Parameters.Add("@MaSach", SqlDbType.Int);
+                cmd.CommandText = @"Update SACH set MaSach = @MaSach, TenSach = @TenSach, Gia = @Gia, SoLuong = @SoLuong, TacGia = @TacGia, MaNCC = @MaNCC, LanTaiBan = @LanTaiBan, MaLoai = @MaLoai, DaXoa = @DaXoa where MaSach = @MaSach";
+                cmd.Parameters.Add("@MaSach", SqlDbType.Char, 10);
                 cmd.Parameters.Add("@TenSach", SqlDbType.NVarChar, 50);
                 cmd.Parameters.Add("@Gia", SqlDbType.Money);
                 cmd.Parameters.Add("@SoLuong", SqlDbType.Int);
@@ -97,7 +96,6 @@ namespace QLNS.DAO
                 cmd.Parameters.Add("@LanTaiBan", SqlDbType.Int);
                 cmd.Parameters.Add("@MaLoai", SqlDbType.Int);
                 cmd.Parameters.Add("@DaXoa", SqlDbType.Int);
-
                 cmd.Parameters["@MaSach"].Value = sach.MaSach;
                 cmd.Parameters["@TenSach"].Value = sach.TenSach;
                 cmd.Parameters["@Gia"].Value = sach.Gia;
@@ -106,6 +104,7 @@ namespace QLNS.DAO
                 cmd.Parameters["@MaNCC"].Value = sach.MaNCC;
                 cmd.Parameters["@LanTaiBan"].Value = sach.LanTaiBan;
                 cmd.Parameters["@DaXoa"].Value = sach.DaXoa;
+                cmd.Parameters["@MaLoai"].Value = sach.MaLoai;
                 return Update(cmd);
             }
             catch (Exception e)
@@ -170,7 +169,7 @@ namespace QLNS.DAO
             try
             {
                 SqlCommand cmd = new SqlCommand();
-                cmd.CommandText = @"Select * from SACH where MaSach = " + masach.ToString();
+                cmd.CommandText = @"Select * from SACH where MaSach = '" + masach.ToString()+"'";
                 dt = GetTable(cmd, "SACH");
                 SachInfo sach = new SachInfo();
                 sach.MaSach = dt.Rows[0]["MaSach"].ToString();
@@ -180,7 +179,7 @@ namespace QLNS.DAO
                 sach.MaNCC = int.Parse(dt.Rows[0]["MaNCC"].ToString());
                 sach.DaXoa = int.Parse(dt.Rows[0]["DaXoa"].ToString());
                 sach.TacGia = dt.Rows[0]["TacGia"].ToString();
-                sach.LanTaiBan = int.Parse(dt.Rows[0]["TenNSX"].ToString());
+                sach.LanTaiBan = int.Parse(dt.Rows[0]["LanTaiBan"].ToString());
                 sach.MaLoai = int.Parse(dt.Rows[0]["MaLoai"].ToString());
                 return sach;
             }

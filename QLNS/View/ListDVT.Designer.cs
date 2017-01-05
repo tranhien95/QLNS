@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ListDVT));
+            DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
             this.btnTim = new DevExpress.XtraEditors.SimpleButton();
             this.btnChiTiet = new DevExpress.XtraEditors.SimpleButton();
             this.gcDVT = new DevExpress.XtraGrid.GridControl();
@@ -85,7 +86,10 @@
             // 
             // gcDVT
             // 
-            this.gcDVT.Location = new System.Drawing.Point(74, 155);
+            gridLevelNode1.RelationName = "Level1";
+            this.gcDVT.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
+            gridLevelNode1});
+            this.gcDVT.Location = new System.Drawing.Point(68, 147);
             this.gcDVT.MainView = this.gvDVT;
             this.gcDVT.Name = "gcDVT";
             this.gcDVT.Size = new System.Drawing.Size(751, 303);
